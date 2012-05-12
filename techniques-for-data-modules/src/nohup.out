@@ -1,0 +1,8 @@
+Time to read 88798 entries from ./jsonWrapper: 145ms
+Time to read 88799 entries from ./rawWrapper: 160ms
+Time to read 88798 entries from ./data-json.js: 310ms
+Time to read 88798 entries from ./data-json.coffee: 333ms
+Time to read 88799 entries from ./data-min.js: 814ms
+Time to read 88799 entries from ./data.js: 921ms
+Time to read 88799 entries from ./data-min.coffee: 2610943ms
+Time to read 88799 entries from ./data.coffee: 10383957ms

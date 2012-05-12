@@ -165,3 +165,5 @@ Time to read 88799 entries from ./data.js: 1255ms
 Time to read 88799 entries from ./jsonWrapper: 129ms
 Time to read 88799 entries from ./data.coffee: 7434647ms
 
+Minimising the coffeescript module helps a lot too!
+

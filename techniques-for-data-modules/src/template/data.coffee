@@ -88797,5 +88797,5 @@ module.exports = [
   {"name": "AARANT", "cf": 90.483},
   {"name": "AANDERUD", "cf": 90.483},
   {"name": "AALUND", "cf": 90.483},
-  {"name": "AALDERINK", "cf": 90.483},
+  {"name": "AALDERINK", "cf": 90.483}
 ]

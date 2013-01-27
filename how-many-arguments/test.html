@@ -1,0 +1,65 @@
+<html>
+<body>
+<div id='#ua'></div>
+<div id='#content'></div>
+<div id='#script'></div>
+<div style='display: none' id='#test'></div>
+
+<script>
+
+document.getElementById('#ua').innerHTML = "Your Browser: " + navigator.userAgent;
+
+function test(n)
+{
+	str = "function f2(){document.getElementById('#test').innerHTML = arguments.length;}; f2(" + arr.slice(0,n).join(',') + ");";
+
+	var g = document.createElement('script');
+	var s = document.getElementsByTagName('script')[0];
+	g.text = str;
+	s.parentNode.insertBefore(g, s);
+	if (document.getElementById('#test').innerHTML != n)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+var n = 1;
+var arr = [1]
+var ok = true;
+while (ok)
+{
+	if (test(n))
+	{
+		n *=2;
+		arr = arr.concat(arr);
+	}
+	else
+	{
+		break;
+	}
+
+}
+var range = [1,n];
+
+while(range[0] != range[1])
+{
+	var mid = Math.floor((range[0] + range[1])/2);
+	if (mid == range[0] || mid == range[1]) break;
+	if (test(mid))
+	{
+		range[0] = mid;
+	}
+	else
+	{
+		range[1] = mid;
+	}
+}
+document.getElementById('#content').innerHTML = "Most arguments supported = " + range[0] + ".";
+
+</script>
+</body>
+</html>
